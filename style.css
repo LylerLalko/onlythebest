@@ -1,7 +1,7 @@
  @import url('https://rsms.me/inter/inter.css');
 html {
-  background-color: #241e02;
-  color: #ffffff;
+  background-color: #d3ffce;
+  color: #b0e0e6;
   font-family: Inter papyrus;
   }
   .heading {
@@ -17,17 +17,17 @@ html {
     text-align: center;
   }
   a:link {
-    color: #ffffff;
+    color: #b0e0e6;
     background-color: transparent;
     text-decoration: none;
   }
   a:visited {
-    color: #ffffff;
+    color: #b0e0e6;
     background-color: transparent;
     text-decoration: none;
   }
   a:hover {
-    color: #ffffff;
+    color: #b0e0e6;
     background-color: transparent;
     text-decoration: underline;
   }
