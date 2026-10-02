@@ -189,46 +189,4 @@
             </div>
         </footer>
     </body>
-     <script>
-    // 1. Set your password here
-    const correctPassword = "0601";
-
-    // 2. This code automatically builds a clean, unbreakable lock overlay
-    const overlay = document.createElement('div');
-    overlay.style = "position:fixed; top:0; left:0; width:100%; height:100%; background:#222; z-index:999999; display:flex; justify-content:center; align-items:center; font-family:sans-serif; color:white;";
-    
-    // Add the little popup box content inside the overlay
-    overlay.innerHTML = `
-        <div style="text-align:center; background:#333; padding:30px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.5);">
-            <h3 style="margin-top:0;">Enter Password</h3>
-            <input type="password" id="popup-pass" placeholder="Password?" style="padding:10px; border-radius:5px; border:none; margin-bottom:15px; width:200px; text-align:center;"><br>
-            <button id="popup-btn" style="padding:10px 20px; background:#007bff; color:white; border:none; border-radius:5px; cursor:pointer; font-weight:bold;">Enter</button>
-            <p id="popup-error" style="color:#ff4d4d; margin-top:10px; display:none; font-size:14px;">Nope haha</p>
-        </div>
-    `;
-    
-    // Inject the overlay onto the page immediately so the user can't see the site
-    document.documentElement.appendChild(overlay);
-
-    // 3. Logic to check the password
-    function checkPassword() {
-        const input = document.getElementById('popup-pass').value;
-        const error = document.getElementById('popup-error');
-        
-        if (input === correctPassword) {
-            overlay.remove(); // Vaporizes the lock completely, revealing the site
-        } else {
-            error.style.display = 'block'; // Shows "Wrong password!"
-            document.getElementById('popup-pass').value = ''; // Clears the input
-        }
-    }
-
-    // Attach click and "Enter" key events to the injected elements
-    setTimeout(() => {
-        document.getElementById('popup-btn').addEventListener('click', checkPassword);
-        document.getElementById('popup-pass').addEventListener('keydown', (e) => {
-            if (e.key === 'Enter') checkPassword();
-        });
-    }, 10);
-</script>
 </html>
